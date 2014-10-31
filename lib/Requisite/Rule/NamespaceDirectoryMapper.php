@@ -26,6 +26,7 @@ class NamespaceDirectoryMapper implements AutoLoadRuleInterface {
 	/**
 	 * @param string $base_dir
 	 * @param string $base_ns
+	 * @param Loader\FileLoaderInterface $file_loader $file_loader (Optional)
 	 */
 	function __construct( $base_dir, $base_ns = '', Loader\FileLoaderInterface $file_loader = NULL ) {
 
@@ -52,6 +53,10 @@ class NamespaceDirectoryMapper implements AutoLoadRuleInterface {
 	 * @return bool
 	 */
 	public function loadClass( $class ) {
+
+		//make sure the class name is absolute
+		if ( 0 !== strpos( $class, '\\' ) )
+			$class = '\\' . $class;
 
 		// check if the namespace matches the class
 		if ( 0 !== strpos( $class, $this->base_ns ) )
