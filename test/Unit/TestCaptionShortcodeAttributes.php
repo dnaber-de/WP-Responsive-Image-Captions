@@ -90,6 +90,21 @@ class CaptionShortcodeAttributesTest extends Cases\BootstrapedTestCase {
 	}
 
 	/**
+	 * @dataProvider stringProvider
+	 * @param $value
+	 * @param $expected
+	 */
+	public function test_content( $value, $expected ) {
+
+		$this->testee->set_content( $value );
+		$this->assertEquals(
+			$expected,
+			$this->testee->get_content()
+		);
+	}
+
+
+	/**
 	 * @return array
 	 */
 	public function stringProvider() {

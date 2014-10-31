@@ -31,7 +31,12 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributesInterface 
 	private $class;
 
 	/**
-	 * @return mixed
+	 * @type string
+	 */
+	private $content;
+
+	/**
+	 * @return string
 	 */
 	public function get_id() {
 
@@ -40,8 +45,7 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributesInterface 
 
 	/**
 	 * @param $id
-	 *
-	 * @return mixed
+	 * @return void
 	 */
 	public function set_id( $id ) {
 
@@ -58,8 +62,7 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributesInterface 
 
 	/**
 	 * @param string $align
-	 *
-	 * @return mixed
+	 * @return void
 	 */
 	public function set_align( $align ) {
 
@@ -76,8 +79,7 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributesInterface 
 
 	/**
 	 * @param string $width
-	 *
-	 * @return mixed
+	 * @return void
 	 */
 	public function set_width( $width ) {
 
@@ -94,8 +96,7 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributesInterface 
 
 	/**
 	 * @param string $caption
-	 *
-	 * @return mixed
+	 * @return void
 	 */
 	public function set_caption( $caption ) {
 
@@ -112,11 +113,27 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributesInterface 
 
 	/**
 	 * @param string $class
-	 *
-	 * @return mixed
+	 * @return void
 	 */
 	public function set_class( $class ) {
 
 		$this->class = (string) $class;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function get_content() {
+
+		return $this->content;
+	}
+
+	/**
+	 * @param string $content
+	 * @return void
+	 */
+	public function set_content( $content ) {
+
+		$this->content = (string) $content;
 	}
 }

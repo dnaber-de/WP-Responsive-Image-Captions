@@ -7,7 +7,7 @@ namespace ResponsiveImageShortcode\Model;
 interface CaptionShortcodeAttributesInterface {
 
 	/**
-	 * @return mixed
+	 * @return string
 	 */
 	public function get_id();
 
@@ -19,7 +19,7 @@ interface CaptionShortcodeAttributesInterface {
 	public function set_id( $id );
 
 	/**
-	 * @return mixed
+	 * @return string
 	 */
 	public function get_align();
 
@@ -31,7 +31,7 @@ interface CaptionShortcodeAttributesInterface {
 	public function set_align( $align );
 
 	/**
-	 * @return mixed
+	 * @return int
 	 */
 	public function get_width();
 
@@ -43,7 +43,7 @@ interface CaptionShortcodeAttributesInterface {
 	public function set_width( $width );
 
 	/**
-	 * @return mixed
+	 * @return string
 	 */
 	public function get_caption();
 
@@ -55,7 +55,7 @@ interface CaptionShortcodeAttributesInterface {
 	public function set_caption( $caption );
 
 	/**
-	 * @return mixed
+	 * @return string
 	 */
 	public function get_class();
 
@@ -65,4 +65,16 @@ interface CaptionShortcodeAttributesInterface {
 	 * @return mixed
 	 */
 	public function set_class( $class );
+
+	/**
+	 * @return string
+	 */
+	public function get_content();
+
+	/**
+	 * @param string $content
+	 *
+	 * @return mixed
+	 */
+	public function set_content( $content );
 } 
