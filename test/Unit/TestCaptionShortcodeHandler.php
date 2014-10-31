@@ -11,6 +11,7 @@ class TestCaptionShortcodeHandler extends Cases\BootstrapedTestCase {
 
 		$this->maybe_bootstrap();
 		$this->load_mock( 'shortcode_atts' );
+		$this->load_mock( 'do_shortcode' );
 	}
 
 	/**

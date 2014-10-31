@@ -44,7 +44,7 @@ class CaptionShortcodeHandler implements ShortcodeHandlerInterface {
 			$setter = "set_$key";
 			$this->attributes->$setter( $value );
 		}
-		$this->attributes->set_content( $content );
+		$this->attributes->set_content( do_shortcode( $content ) );
 
 		return TRUE;
 	}
