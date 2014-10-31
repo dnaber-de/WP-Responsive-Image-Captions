@@ -27,9 +27,25 @@ class CaptionShortcodeHandler implements ShortcodeHandlerInterface {
 	 * @return bool|\WP_Error
 	 */
 	public function parse_shortcode_attributes( array $attributes, $content = NULL ) {
-		// TODO: Implement parse_shortcode_attributes() method.
+
+		$default_attributes = array(
+			'id'      => '',
+			'align'   => 'alignnone',
+			'width'   => '',
+			'caption' => '',
+			'class'   => '',
+		);
+		$attributes = shortcode_atts(
+			$default_attributes,
+			$attributes,
+			'caption'
+		);
+		foreach ( $attributes as $key => $value ) {
+			$setter = "set_$key";
+			$this->attributes->$setter( $value );
+		}
+		$this->attributes->set_content( $content );
 
 		return TRUE;
 	}
-
 } 
