@@ -9,7 +9,7 @@ use \ResponsiveImageShortcode\Model;
 class CaptionShortcodeTemplate implements ShortcodeTemplateInterface {
 
 	/**
-	 * @type Model\CaptionShortcodeAttributeInterface
+	 * @type Model\CaptionShortcodeAttributesInterface
 	 */
 	private $attributes;
 
@@ -19,11 +19,11 @@ class CaptionShortcodeTemplate implements ShortcodeTemplateInterface {
 	private $controller;
 
 	/**
-	 * @param Model\CaptionShortcodeAttributeInterface $attributes
+	 * @param Model\CaptionShortcodeAttributesInterface $attributes
 	 * @param Controller\ShortcodeHandlerInterface     $controller
 	 */
 	function __construct(
-		Model\CaptionShortcodeAttributeInterface $attributes,
+		Model\CaptionShortcodeAttributesInterface $attributes,
 		Controller\ShortcodeHandlerInterface $controller
 	) {
 

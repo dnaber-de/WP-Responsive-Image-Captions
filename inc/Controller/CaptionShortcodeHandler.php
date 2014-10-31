@@ -13,9 +13,9 @@ class CaptionShortcodeHandler implements ShortcodeHandlerInterface {
 	private $attributes;
 
 	/**
-	 * @param Model\CaptionShortcodeAttributeInterface $attributes
+	 * @param Model\CaptionShortcodeAttributesInterface $attributes
 	 */
-	public function __construct( Model\CaptionShortcodeAttributeInterface $attributes ) {
+	public function __construct( Model\CaptionShortcodeAttributesInterface $attributes ) {
 
 		$this->attributes = $attributes;
 	}

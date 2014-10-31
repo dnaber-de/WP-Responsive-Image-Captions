@@ -4,7 +4,7 @@
 namespace ResponsiveImageShortcode\Model;
 
 
-interface CaptionShortcodeAttributeInterface {
+interface CaptionShortcodeAttributesInterface {
 
 	/**
 	 * @return mixed
