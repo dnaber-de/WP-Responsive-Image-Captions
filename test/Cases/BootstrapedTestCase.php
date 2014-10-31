@@ -31,4 +31,17 @@ class BootstrapedTestCase extends \PHPUnit_Framework_TestCase {
 			)
 		);
 	}
+
+	public function load_mock( $name ) {
+
+		$mock_dir = dirname( __DIR__ ) . '/Mocks';
+		$file = $mock_dir . '/' . $name . '.php';
+
+		if ( is_readable( $file ) ) {
+			require_once $file;
+			return TRUE;
+		}
+
+		return FALSE;
+	}
 } 
