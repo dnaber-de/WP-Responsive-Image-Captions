@@ -40,10 +40,16 @@ class CaptionShortcodeHandler implements ShortcodeHandlerInterface {
 			$attributes,
 			'caption'
 		);
+
 		foreach ( $attributes as $key => $value ) {
+			if ( 'class' == $key )
+				continue;
 			$setter = "set_$key";
 			$this->attributes->$setter( $value );
 		}
+		$this->attributes->set_class(
+			trim( "wp-caption {$attributes[ 'align' ]} {$attributes[ 'class' ]}" )
+		);
 		$this->attributes->set_content( do_shortcode( $content ) );
 
 		return TRUE;

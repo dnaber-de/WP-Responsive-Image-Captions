@@ -31,6 +31,9 @@ class TestCaptionShortcodeHandler extends Cases\BootstrapedTestCase {
 		$model_mock = $this->getMockBuilder( '\ResponsiveImageShortcode\Model\CaptionShortcodeAttributes' )
 			->getMock();
 		foreach ( $defaults as $key => $default_value ) {
+			if ( 'class' == $key )
+				continue;
+
 			$method = 'set_' . $key;
 			$value = isset( $attributes[ $key ] )
 				? $attributes[ $key ]
@@ -39,6 +42,23 @@ class TestCaptionShortcodeHandler extends Cases\BootstrapedTestCase {
 				->method( $method )
 				->with( $value );
 		}
+
+		// mock set_class separate
+		$class = 'wp-caption ';
+		if ( isset( $attributes[ 'align' ] ) )
+			$class .= $attributes[ 'align' ] . ' ';
+		elseif ( isset( $defaults[ 'align' ] ) )
+			$class .= $defaults[ 'align' ];
+
+		if ( isset( $attributes[ 'class' ] ) )
+			$class .= $attributes[ 'class' ];
+		elseif ( $defaults[ 'class' ] )
+			$class .= $defaults[ 'class' ];
+
+		$model_mock->expects( $this->exactly( 1 ) )
+			->method( 'set_class' )
+			->with( trim( $class ) );
+
 		$model_mock->expects( $this->exactly( 1 ) )
 			->method( 'set_content' )
 			->with( $content );
@@ -61,7 +81,7 @@ class TestCaptionShortcodeHandler extends Cases\BootstrapedTestCase {
 					'align' => 'center',
 					'width' => '640',
 					'caption' => 'What a picture!',
-					'class' => 'wp-caption'
+					'class' => 'foo'
 				),
 				'Shortcode Content'
 			),
