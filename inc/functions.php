@@ -11,6 +11,13 @@ namespace ResponsiveImageShortcode;
  */
 function init() {
 
+	$data = (object) array(
+		'plugin_dir' => dirname( __DIR__ )
+	);
+	$autoloader = init_autoloader( $data->plugin_dir . '/lib' );
+
+	$plugin = new ResponsiveImageShortcodes( $data );
+	$plugin->run();
 }
 
 /**
