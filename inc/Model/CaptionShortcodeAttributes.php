@@ -3,7 +3,7 @@
 
 namespace ResponsiveImageShortcode\Model;
 
-class CaptionShortcodeAttributes implements CaptionShortcodeAttributeInterface {
+class CaptionShortcodeAttributes implements CaptionShortcodeAttributesInterface {
 
 	/**
 	 * @type string
@@ -16,7 +16,7 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributeInterface {
 	private $align;
 
 	/**
-	 * @type string
+	 * @type int
 	 */
 	private $width;
 
@@ -34,7 +34,8 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributeInterface {
 	 * @return mixed
 	 */
 	public function get_id() {
-		// TODO: Implement get_id() method.
+
+		return $this->id;
 	}
 
 	/**
@@ -43,14 +44,16 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributeInterface {
 	 * @return mixed
 	 */
 	public function set_id( $id ) {
-		// TODO: Implement set_id() method.
+
+		$this->id = (string) $id;
 	}
 
 	/**
 	 * @return mixed
 	 */
 	public function get_align() {
-		// TODO: Implement get_align() method.
+
+		return $this->align;
 	}
 
 	/**
@@ -59,14 +62,16 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributeInterface {
 	 * @return mixed
 	 */
 	public function set_align( $align ) {
-		// TODO: Implement set_align() method.
+
+		$this->align = (string) $align;
 	}
 
 	/**
 	 * @return mixed
 	 */
 	public function get_width() {
-		// TODO: Implement get_width() method.
+
+		return $this->width;
 	}
 
 	/**
@@ -75,14 +80,16 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributeInterface {
 	 * @return mixed
 	 */
 	public function set_width( $width ) {
-		// TODO: Implement set_width() method.
+
+		$this->width = (int) $width;
 	}
 
 	/**
 	 * @return mixed
 	 */
 	public function get_caption() {
-		// TODO: Implement get_caption() method.
+
+		return $this->caption;
 	}
 
 	/**
@@ -91,14 +98,16 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributeInterface {
 	 * @return mixed
 	 */
 	public function set_caption( $caption ) {
-		// TODO: Implement set_caption() method.
+
+		$this->caption = (string) $caption;
 	}
 
 	/**
 	 * @return mixed
 	 */
 	public function get_class() {
-		// TODO: Implement get_class() method.
+
+		return $this->class;
 	}
 
 	/**
@@ -107,7 +116,7 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributeInterface {
 	 * @return mixed
 	 */
 	public function set_class( $class ) {
-		// TODO: Implement set_class() method.
-	}
 
+		$this->class = (string) $class;
+	}
 }
