@@ -38,9 +38,22 @@ class CaptionShortcodeTemplate implements ShortcodeTemplateInterface {
 	 * @return string
 	 */
 	public function get_output( array $attributes, $content = NULL ) {
-		// TODO: Implement get_output() method.
 
-		return '';
+		$this->controller->parse_shortcode_attributes( $attributes, $content );
+
+		$id    = esc_attr( $this->attributes->get_id() );
+		$class = esc_attr( $this->attributes->get_class() );
+		$content = $this->attributes->get_content(); // don't escape HTML inside
+		$caption = $this->attributes->get_caption();
+
+		$output = <<<HTML
+<div id="{$id}" class="{$class}">
+	{$content}
+	<p class="wp-caption-text">{$caption}</p>
+</div>
+HTML;
+
+		return $output;
 	}
 
 }
