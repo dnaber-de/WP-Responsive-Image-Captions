@@ -1,0 +1,19 @@
+<phpunit
+	bootstrap="test/bootstrap.php"
+	backupGlobals="false"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	>
+	<testsuites>
+		<!-- the order of the test-suites is important! -->
+		<testsuite name="BootstrapTests">
+			<file>./test/Unit/Test_init_autoloader.php</file>
+		</testsuite>
+		<testsuite name="PluginTests">
+			<directory prefix="Test" suffix=".php">./test/Unit/</directory>
+			<exclude>./test/Unit/Test_init_autoloader.php</exclude>
+		</testsuite>
+	</testsuites>
+</phpunit>
