@@ -44,6 +44,7 @@ class CaptionShortcodeTemplate implements ShortcodeTemplateInterface {
 
 		$id    = esc_attr( $this->attributes->get_id() );
 		$class = esc_attr( $this->attributes->get_class() );
+		$align = esc_attr( $this->attributes->get_align() );
 		$content = $this->attributes->get_content(); // don't escape HTML inside
 		$caption = $this->attributes->get_caption();
 		$additional_attributes = '';
@@ -53,9 +54,11 @@ class CaptionShortcodeTemplate implements ShortcodeTemplateInterface {
 			$additional_attributes .= " $name=\"$value\"";
 		}
 		$output = <<<HTML
-<div id="{$id}" class="{$class}"{$additional_attributes}>
-	{$content}
-	<p class="wp-caption-text">{$caption}</p>
+<div class="wp-caption-wrapper {$align}">
+	<div id="{$id}" class="{$class}"{$additional_attributes}>
+		{$content}
+		<p class="wp-caption-text">{$caption}</p>
+	</div>
 </div>
 HTML;
 

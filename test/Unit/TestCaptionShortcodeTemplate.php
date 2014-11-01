@@ -36,6 +36,10 @@ class TestCaptionShortcodeTemplate extends Cases\BootstrapedTestCase {
 			->willReturn( 'This is the Caption' );
 
 		$model_mock->expects( $this->any() )
+			->method( 'get_align' )
+			->willReturn( 'aligncenter' );
+
+		$model_mock->expects( $this->any() )
 			->method( 'get_additional_attributes' )
 			->willReturn( array( 'style' => 'display: block;', 'title' => 'Caption Wrapper' ) );
 
@@ -53,8 +57,14 @@ class TestCaptionShortcodeTemplate extends Cases\BootstrapedTestCase {
 		$dom = new \DOMDocument;
 		$dom->loadHTML( $result );
 
+		$outer_wrapper = $dom->getElementsByTagName( 'div' )->item( 0 );
 		$wrapper = $dom->getElementById( 'caption-1' );
 
+		// check the class of the outer wrapper
+		$this->assertEquals(
+			'wp-caption-wrapper aligncenter',
+			$outer_wrapper->getAttribute( 'class' )
+		);
 		// check the wrapper class
 		$this->assertEquals(
 			'wp-caption aligncenter',
