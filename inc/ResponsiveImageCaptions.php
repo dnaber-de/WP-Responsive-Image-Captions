@@ -1,8 +1,6 @@
 <?php # -*- coding: utf-8 -*-
 
-
 namespace ResponsiveImageCaption;
-
 
 class ResponsiveImageCaptions {
 
