@@ -32,12 +32,13 @@ class CaptionShortcodeTemplate implements ShortcodeTemplateInterface {
 	}
 
 	/**
+	 * @param string $void
 	 * @param array $attributes
 	 * @param       $content
 	 *
 	 * @return string
 	 */
-	public function get_output( array $attributes, $content = NULL ) {
+	public function get_output( $void, array $attributes, $content = NULL ) {
 
 		$this->controller->parse_shortcode_attributes( $attributes, $content );
 

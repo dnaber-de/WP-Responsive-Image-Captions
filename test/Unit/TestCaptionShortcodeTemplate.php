@@ -42,9 +42,9 @@ class TestCaptionShortcodeTemplate extends Cases\BootstrapedTestCase {
 			->method( 'parse_shortcode_attributes' )
 			->with( array(), NULL );
 
-		$testee = new View\CaptionShortcodeTemplate( $model_mock, $controller_mock );
+		$testee = new View\CaptionShortcodeTemplate(  $model_mock, $controller_mock );
 
-		$result = $testee->get_output( array() );
+		$result = $testee->get_output( '', array() );
 
 		$dom = new \DOMDocument;
 		$dom->loadHTML( $result );
