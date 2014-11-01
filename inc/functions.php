@@ -23,7 +23,7 @@ function init() {
 			__NAMESPACE__
 		)
 	);
-	$plugin = new ResponsiveImageShortcodes( $data );
+	$plugin = new ResponsiveImageCaptions( $data );
 	$plugin->run();
 }
 

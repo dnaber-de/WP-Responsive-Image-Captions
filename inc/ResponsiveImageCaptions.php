@@ -4,7 +4,7 @@
 namespace ResponsiveImageCaption;
 
 
-class ResponsiveImageShortcodes {
+class ResponsiveImageCaptions {
 
 	/**
 	 * main plugin data
