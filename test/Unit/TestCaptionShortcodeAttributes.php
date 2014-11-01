@@ -103,6 +103,19 @@ class CaptionShortcodeAttributesTest extends Cases\BootstrapedTestCase {
 		);
 	}
 
+	/**
+	 * @dataProvider arrayProvider
+	 * @param Array $value
+	 * @param Array $expected
+	 */
+	public function test_additional_attributes( Array $value, Array $expected ) {
+
+		$this->testee->set_additional_attributes( $value );
+		$this->assertEquals(
+			$expected,
+			$this->testee->get_additional_attributes()
+		);
+	}
 
 	/**
 	 * @return array
@@ -158,6 +171,24 @@ class CaptionShortcodeAttributesTest extends Cases\BootstrapedTestCase {
 			array(
 				NULL,
 				(int) NULL
+			)
+		);
+	}
+
+	public function arrayProvider() {
+
+		return array(
+			array(
+				array( 'One', 'Two', 3 ),
+				array( 'One', 'Two', 3 )
+			),
+			array(
+				array(),
+				array()
+			),
+			array(
+				array( 'style' => 'display: block;'),
+				array( 'style' => 'display: block;' )
 			)
 		);
 	}

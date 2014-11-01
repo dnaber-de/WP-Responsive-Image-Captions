@@ -35,6 +35,10 @@ class TestCaptionShortcodeTemplate extends Cases\BootstrapedTestCase {
 			->method( 'get_caption' )
 			->willReturn( 'This is the Caption' );
 
+		$model_mock->expects( $this->any() )
+			->method( 'get_additional_attributes' )
+			->willReturn( array( 'style' => 'display: block;', 'title' => 'Caption Wrapper' ) );
+
 		$controller_mock = $this->getMockBuilder( '\ResponsiveImageCaption\Controller\CaptionShortcodeHandler')
 			->disableOriginalConstructor()
 			->getMock();
@@ -77,6 +81,16 @@ class TestCaptionShortcodeTemplate extends Cases\BootstrapedTestCase {
 		$this->assertEquals(
 			'This is the Caption',
 			$p_list->item( 0 )->nodeValue
+		);
+
+		// test additional attributes
+		$this->assertEquals(
+			'display: block;',
+			$wrapper->getAttribute( 'style' )
+		);
+		$this->assertEquals(
+			'Caption Wrapper',
+			$wrapper->getAttribute( 'title' )
 		);
 	}
 }

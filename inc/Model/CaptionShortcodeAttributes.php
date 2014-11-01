@@ -36,6 +36,11 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributesInterface 
 	private $content;
 
 	/**
+	 * @type array
+	 */
+	private $additional_attributes;
+
+	/**
 	 * @return string
 	 */
 	public function get_id() {
@@ -136,4 +141,23 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributesInterface 
 
 		$this->content = (string) $content;
 	}
+
+	/**
+	 * @return array
+	 */
+	public function get_additional_attributes() {
+
+		return $this->additional_attributes;
+	}
+
+	/**
+	 * @param array $attributes
+	 *
+	 * @return mixed
+	 */
+	public function set_additional_attributes( Array $attributes ) {
+
+		$this->additional_attributes = $attributes;
+	}
+
 }

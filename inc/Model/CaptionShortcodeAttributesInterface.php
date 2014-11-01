@@ -77,4 +77,16 @@ interface CaptionShortcodeAttributesInterface {
 	 * @return mixed
 	 */
 	public function set_content( $content );
+
+	/**
+	 * @return array
+	 */
+	public function get_additional_attributes();
+
+	/**
+	 * @param array $attributes
+	 *
+	 * @return mixed
+	 */
+	public function set_additional_attributes( Array $attributes );
 } 
