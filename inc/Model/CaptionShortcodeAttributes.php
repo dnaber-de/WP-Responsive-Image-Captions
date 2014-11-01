@@ -8,37 +8,37 @@ class CaptionShortcodeAttributes implements CaptionShortcodeAttributesInterface 
 	/**
 	 * @type string
 	 */
-	private $id;
+	private $id = '';
 
 	/**
 	 * @type string
 	 */
-	private $align;
+	private $align = '';
 
 	/**
 	 * @type int
 	 */
-	private $width;
+	private $width = NULL;
 
 	/**
 	 * @type string
 	 */
-	private $caption;
+	private $caption = '';
 
 	/**
 	 * @type string
 	 */
-	private $class;
+	private $class = '';
 
 	/**
 	 * @type string
 	 */
-	private $content;
+	private $content = '';
 
 	/**
 	 * @type array
 	 */
-	private $additional_attributes;
+	private $additional_attributes = array();
 
 	/**
 	 * @return string
