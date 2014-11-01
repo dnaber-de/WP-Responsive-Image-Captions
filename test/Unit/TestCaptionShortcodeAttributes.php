@@ -1,9 +1,9 @@
 <?php # -*- coding: utf-8 -*-
 
 
-namespace ResponsiveImageShortcode\Test\Unit;
-use \ResponsiveImageShortcode\Test\Cases;
-use \ResponsiveImageShortcode\Model;
+namespace ResponsiveImageCaption\Test\Unit;
+use \ResponsiveImageCaption\Test\Cases;
+use \ResponsiveImageCaption\Model;
 
 class CaptionShortcodeAttributesTest extends Cases\BootstrapedTestCase {
 

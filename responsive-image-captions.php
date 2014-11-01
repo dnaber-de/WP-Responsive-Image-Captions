@@ -1,9 +1,9 @@
 <?php # -*- coding: utf-8 -*-
 
-namespace ResponsiveImageShortcode;
+namespace ResponsiveImageCaption;
 
 /**
- * Plugin Name: Responsive Image Shortcode
+ * Plugin Name: Responsive Image Captions
  * Author: David Naber
  * Author URI: http://dnaber.de/
  * Version: 2014.10.31

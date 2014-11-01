@@ -1,9 +1,9 @@
 <?php # -*- coding: utf-8 -*-
 
 
-namespace ResponsiveImageShortcode\Test\Unit;
-use \ResponsiveImageShortcode\Test\Cases;
-use \ResponsiveImageShortcode\Controller;
+namespace ResponsiveImageCaption\Test\Unit;
+use \ResponsiveImageCaption\Test\Cases;
+use \ResponsiveImageCaption\Controller;
 
 class TestCaptionShortcodeHandler extends Cases\BootstrapedTestCase {
 
@@ -28,7 +28,7 @@ class TestCaptionShortcodeHandler extends Cases\BootstrapedTestCase {
 			'caption' => '',
 			'class'   => ''
 		);
-		$model_mock = $this->getMockBuilder( '\ResponsiveImageShortcode\Model\CaptionShortcodeAttributes' )
+		$model_mock = $this->getMockBuilder( '\ResponsiveImageCaption\Model\CaptionShortcodeAttributes' )
 			->getMock();
 		foreach ( $defaults as $key => $default_value ) {
 			if ( 'class' == $key )

@@ -1,9 +1,9 @@
 <?php # -*- coding: utf-8 -*-
 
 
-namespace ResponsiveImageShortcode\View;
-use \ResponsiveImageShortcode\Controller;
-use \ResponsiveImageShortcode\Model;
+namespace ResponsiveImageCaption\View;
+use \ResponsiveImageCaption\Controller;
+use \ResponsiveImageCaption\Model;
 
 
 class CaptionShortcodeTemplate implements ShortcodeTemplateInterface {

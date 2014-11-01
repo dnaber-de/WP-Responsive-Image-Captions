@@ -1,9 +1,9 @@
 <?php # -*- coding: utf-8 -*-
 
 
-namespace ResponsiveImageShortcode\Test\Unit;
-use \ResponsiveImageShortcode\Test\Cases;
-use \ResponsiveImageShortcode\View;
+namespace ResponsiveImageCaption\Test\Unit;
+use \ResponsiveImageCaption\Test\Cases;
+use \ResponsiveImageCaption\View;
 
 
 class TestCaptionShortcodeTemplate extends Cases\BootstrapedTestCase {
@@ -16,7 +16,7 @@ class TestCaptionShortcodeTemplate extends Cases\BootstrapedTestCase {
 
 	public function test_get_output() {
 
-		$model_mock = $this->getMockBuilder( '\ResponsiveImageShortcode\Model\CaptionShortcodeAttributes' )
+		$model_mock = $this->getMockBuilder( '\ResponsiveImageCaption\Model\CaptionShortcodeAttributes' )
 			->getMock();
 
 		$model_mock->expects( $this->any() )
@@ -35,7 +35,7 @@ class TestCaptionShortcodeTemplate extends Cases\BootstrapedTestCase {
 			->method( 'get_caption' )
 			->willReturn( 'This is the Caption' );
 
-		$controller_mock = $this->getMockBuilder( '\ResponsiveImageShortcode\Controller\CaptionShortcodeHandler')
+		$controller_mock = $this->getMockBuilder( '\ResponsiveImageCaption\Controller\CaptionShortcodeHandler')
 			->disableOriginalConstructor()
 			->getMock();
 		$controller_mock->expects( $this->exactly( 1 ) )

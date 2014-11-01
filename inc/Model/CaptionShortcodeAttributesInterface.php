@@ -1,7 +1,7 @@
 <?php # -*- coding: utf-8 -*-
 
 
-namespace ResponsiveImageShortcode\Model;
+namespace ResponsiveImageCaption\Model;
 
 
 interface CaptionShortcodeAttributesInterface {

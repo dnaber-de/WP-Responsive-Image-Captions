@@ -1,6 +1,6 @@
 <?php # -*- coding: utf-8 -*-
 
-namespace ResponsiveImageShortcode\Test\Unit;
+namespace ResponsiveImageCaption\Test\Unit;
 
 
 class Test_init_autoloader extends \PHPUnit_Framework_TestCase {
@@ -15,13 +15,13 @@ class Test_init_autoloader extends \PHPUnit_Framework_TestCase {
 
 		// test with an invalid directory
 		$this->assertFalse(
-			\ResponsiveImageShortcode\init_autoloader( $invalid_dir )
+			\ResponsiveImageCaption\init_autoloader( $invalid_dir )
 		);
 		$this->assertFalse(
 			class_exists( '\Requisite\Requisite' )
 		);
 
-		$loader = \ResponsiveImageShortcode\init_autoloader( $plugin_dir . '/lib' );
+		$loader = \ResponsiveImageCaption\init_autoloader( $plugin_dir . '/lib' );
 		$this->assertInstanceOf(
 			'\Requisite\SPLAutoLoader',
 			$loader
@@ -38,7 +38,7 @@ class Test_init_autoloader extends \PHPUnit_Framework_TestCase {
 		//after that, the function should return a valid Instance even with a wrong parameter type
 		$this->assertInstanceOf(
 			'\Requisite\SPLAutoLoader',
-			\ResponsiveImageShortcode\init_autoloader( $invalid_dir )
+			\ResponsiveImageCaption\init_autoloader( $invalid_dir )
 		);
 	}
 

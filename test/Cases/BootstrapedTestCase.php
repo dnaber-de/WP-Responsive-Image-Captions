@@ -1,7 +1,7 @@
 <?php # -*- coding: utf-8 -*-
 
 
-namespace ResponsiveImageShortcode\Test\Cases;
+namespace ResponsiveImageCaption\Test\Cases;
 
 
 class BootstrapedTestCase extends \PHPUnit_Framework_TestCase {
@@ -27,7 +27,7 @@ class BootstrapedTestCase extends \PHPUnit_Framework_TestCase {
 		$loader->addRule(
 			new \Requisite\Rule\NamespaceDirectoryMapper(
 				$plugin_dir . '/inc',
-				'ResponsiveImageShortcode'
+				'ResponsiveImageCaption'
 			)
 		);
 	}

@@ -1,6 +1,8 @@
 <?php # -*- coding: utf-8 -*-
 
-namespace ResponsiveImageShortcode;
+namespace ResponsiveImageCaption;
+
+use Requisite\Requisite;
 
 /**
  * instantiate the front controller

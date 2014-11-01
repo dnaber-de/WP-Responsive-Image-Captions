@@ -1,7 +1,7 @@
 <?php # -*- coding: utf-8 -*-
 
 
-namespace ResponsiveImageShortcode\View;
+namespace ResponsiveImageCaption\View;
 
 
 interface ShortcodeTemplateInterface {

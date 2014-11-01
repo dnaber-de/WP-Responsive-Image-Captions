@@ -1,8 +1,8 @@
 <?php # -*- coding: utf-8 -*-
 
 
-namespace ResponsiveImageShortcode\Controller;
-use \ResponsiveImageShortcode\Model;
+namespace ResponsiveImageCaption\Controller;
+use \ResponsiveImageCaption\Model;
 
 
 class CaptionShortcodeHandler implements ShortcodeHandlerInterface {
