@@ -30,7 +30,9 @@ class ResponsiveImageCaptions {
 		$handler = new Controller\CaptionShortcodeHandler( $attributes );
 		$view = apply_filters(
 			'ric_shortcode_view',
-			new View\CaptionShortcodeTemplate( $attributes, $handler )
+			current_theme_supports( 'html5', 'caption' )
+				? new View\CaptionShortcodeHTML5Template( $attributes, $handler )
+				: new View\CaptionShortcodeTemplate( $attributes, $handler )
 		);
 
 		add_filter('img_caption_shortcode', array( $view, 'get_output' ), 10, 3 );
