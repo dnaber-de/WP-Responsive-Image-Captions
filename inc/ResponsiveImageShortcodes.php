@@ -33,7 +33,7 @@ class ResponsiveImageShortcodes {
 			new View\CaptionShortcodeTemplate( $attributes, $handler )
 		);
 
-		add_filter('img_caption_shortcode', array( $view, 'get_output' ) );
+		add_filter('img_caption_shortcode', array( $view, 'get_output' ), 10, 3 );
 	}
 
 }
