@@ -23,7 +23,17 @@ class ResponsiveImageShortcodes {
 
 	function run() {
 
+		$attributes = apply_filters(
+			'ric_data_model',
+			new Model\CaptionShortcodeAttributes
+		);
+		$handler = new Controller\CaptionShortcodeHandler( $attributes );
+		$view = apply_filters(
+			'ric_shortcode_view',
+			new View\CaptionShortcodeTemplate( $attributes, $handler )
+		);
 
+		add_filter('img_caption_shortcode', array( $view, 'get_output' ) );
 	}
 
 }
