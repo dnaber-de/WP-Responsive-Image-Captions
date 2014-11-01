@@ -17,7 +17,12 @@ function init() {
 		'plugin_dir' => dirname( __DIR__ )
 	);
 	$autoloader = init_autoloader( $data->plugin_dir . '/lib' );
-
+	$autoloader->addRule(
+		new \Requisite\Rule\NamespaceDirectoryMapper(
+			$data->plugin_dir . '/inc',
+			__NAMESPACE__
+		)
+	);
 	$plugin = new ResponsiveImageShortcodes( $data );
 	$plugin->run();
 }
