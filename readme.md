@@ -20,4 +20,4 @@ img {
 ```
 
 ## Five Classes, three interfaces WTF?
-Indeed, one could handle this issue with exactly one function. Wo why this effort? _Because I can._ Seriously: first of all this somewhat a proof-of-concept and one example on a testable MVC pattern in a WordPress plugin. **Critical reviews are welcome!**
+Indeed, one could handle this issue with exactly one function. So why this effort? _Because I can._ Seriously: first of all this somewhat a proof-of-concept and one example on a testable MVC pattern in a WordPress plugin. **Critical reviews are welcome!**
